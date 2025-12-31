@@ -11,6 +11,9 @@ A comprehensive quantitative trading analysis system for Tesla (TSLA) stock, fea
   - Mean Reversion Strategy
   - Momentum Strategy
   - Combined Multi-Signal Strategy
+  - **NEW: Valuation Strategy** - Daily Long/Short signals
+- **Valuation Analysis**: Determines if Tesla is overpriced or underpriced
+- **Daily Signals**: Automated long/short recommendations with confidence levels
 - **Backtesting Engine**: Comprehensive performance evaluation
 - **Visualization**: Interactive charts and performance dashboards
 
@@ -30,15 +33,17 @@ python main.py
 
 ```
 TeslaQuant/
-├── data/                   # Data storage
+├── data/                      # Data storage
 ├── src/
-│   ├── data_fetcher.py    # Data collection module
-│   ├── indicators.py      # Technical indicators
-│   ├── strategies.py      # Trading strategies
-│   ├── backtester.py      # Backtesting engine
-│   └── visualizer.py      # Visualization tools
-├── main.py                # Main execution script
-└── requirements.txt       # Dependencies
+│   ├── data_fetcher.py       # Data collection module
+│   ├── indicators.py         # Technical indicators
+│   ├── strategies.py         # Trading strategies
+│   ├── valuation_strategy.py # Valuation analysis (NEW)
+│   ├── backtester.py         # Backtesting engine
+│   └── visualizer.py         # Visualization tools
+├── main.py                   # Main execution script
+├── daily_signal.py           # Daily signal generator (NEW)
+└── requirements.txt          # Dependencies
 ```
 
 ## Strategy Overview
@@ -57,6 +62,15 @@ TeslaQuant/
 - MACD crossovers
 - Volume confirmation
 - Rate of change analysis
+
+### 4. Valuation Strategy (NEW)
+- Statistical fair value calculation
+- Z-score analysis
+- Historical percentile ranking
+- Bollinger Band positioning
+- Fundamental metrics (P/E, P/S, P/B)
+- Multi-factor valuation scoring
+- Daily LONG/SHORT signal generation
 
 ## Performance Metrics
 
